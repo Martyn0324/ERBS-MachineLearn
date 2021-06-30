@@ -9,7 +9,7 @@ import matplotlib.image as img
 from sklearn.manifold import TSNE
 from sklearn.cluster import KMeans
 
-data = imageio.get_reader(r"C:\Users\giova\Videos\Captures\Teste.mp4", 'ffmpeg')
+data = imageio.get_reader(r"Teste.mp4", 'ffmpeg')
 model = TSNE()
 k = KMeans()
 
