@@ -9,18 +9,18 @@ import matplotlib.image as img
 from sklearn.manifold import TSNE
 from sklearn.cluster import KMeans
 
+#The following video has 33 seconds. Though it's short, this process is quite computationally expensive
+
 data = imageio.get_reader(r"Teste.mp4", 'ffmpeg')
 model = TSNE()
 k = KMeans()
 
+#Plotting each frame "i" using each pixel "g"
+
 for i, g in enumerate(data):
-    #print(g)
-    #plt.imshow(g)
-    #plt.show(block=False)
-    #tree = DecisionTreeRegressor()
-    #X1, X2, y1, y2 = train_test_split(i, g, test_size=0.3)
-    #tree.fit(X1, y1)
-    k.fit(g.reshape(-1,1))
+    print(g)
+    plt.imshow(g)
+    plt.show(block=False)
 
 #Attention: DO NOT TRY the following:
 #Data = pd.DataFrame({'Frames': enumerate(data)})
